@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "Static pages" do
+  let introTitle = "Ruby on Rails Tutorial Sample App"
   describe "Home page" do
 
     it "should have the h1 'Sample App'" do
@@ -10,7 +11,7 @@ describe "Static pages" do
 
     it "should have the right title" do
       visit '/static_pages/home'
-      page.should have_selector('title', :text => 'Ruby on Rails Tutorial Sample App | Home')
+      page.should have_selector('title', :text => "#{introTitle} | Home")
     end
 
   end
@@ -24,7 +25,7 @@ describe "Static pages" do
 
     it "should have the right title" do
       visit '/static_pages/help'
-      page.should have_selector('title', :text => "Ruby on Rails Tutorial Sample App | Help")
+      page.should have_selector('title', :text => "#{introTitle} | Help")
     end
   end
 
@@ -41,5 +42,14 @@ describe "Static pages" do
     end
   end
 
+  describe "Contact page" do
+
+    it "should have th h1 'Contact'" do
+      visit '/static_pages/contact'
+      page.should have_selector('h1', :text => 'Contact')
+    end
+  end
+
+  
 end
 
