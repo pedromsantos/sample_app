@@ -19,7 +19,7 @@ end
 gem 'jquery-rails', '2.0.0'
 
 group :test, :development do
-  gem 'rspec-rails' '2.8.1'
+  gem 'rspec-rails' #'2.8.1'
   gem 'guard-rspec', '0.5.5'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '~> 0.9.0.rc'
